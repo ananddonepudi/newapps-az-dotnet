@@ -7,7 +7,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["demoapp.csproj", "."]
+COPY ["newapps.csproj", "."]
 RUN dotnet restore "./demoapp.csproj"
 COPY . .
 WORKDIR "/src/."
